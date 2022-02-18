@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
+--
+-- Host: localhost    Database: api
+-- ------------------------------------------------------
+-- Server version	8.0.28
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `authtoken_token`
+--
+
+DROP TABLE IF EXISTS `authtoken_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `authtoken_token` (
+  `key` varchar(40) NOT NULL,
+  `created` datetime(6) NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`key`),
+  UNIQUE KEY `user_id` (`user_id`),
+  CONSTRAINT `authtoken_token_user_id_35299eff_fk_api_customuser_id` FOREIGN KEY (`user_id`) REFERENCES `api_customuser` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `authtoken_token`
+--
+
+LOCK TABLES `authtoken_token` WRITE;
+/*!40000 ALTER TABLE `authtoken_token` DISABLE KEYS */;
+INSERT INTO `authtoken_token` VALUES ('0a0a96aa5d85c43c5efc20c36bde981a71e5c457','2022-02-18 13:46:26.574412',13),('1a27d796de27def15008889d507e9b48ba26f316','2022-02-17 19:10:08.553594',10),('1b7186054c7e2ec65b5a0373340c281ad2446ec6','2022-02-10 15:30:57.732803',1),('25171996e65ead4662dd35fdccaff746e4ed2bf9','2022-02-18 13:42:01.443922',12),('268f60c08c13d4d08e704033f0affb7120c4b4bd','2022-02-12 18:15:12.638035',7),('81c7bfb688b0addba57e72714db8d4c5b9710b1a','2022-02-18 13:58:28.235485',14),('8236dd4122dea28dc701d61032e2d2dd84d099cd','2022-02-12 18:23:41.245885',8),('b967db780efb0b00d7e57d7f02a6a967bb42c261','2022-02-17 19:02:26.701798',9),('c3c1f88302019d3023584a440df2f6d812e29fc7','2022-02-18 11:30:57.118498',11),('f23b8d4883920eb621679c4803bfe51cb379d70b','2022-02-10 16:27:25.019640',5);
+/*!40000 ALTER TABLE `authtoken_token` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-02-18 15:55:57

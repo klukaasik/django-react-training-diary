@@ -1,0 +1,64 @@
+.App {
+  min-height: 100vh;
+  /* text-align: center; */
+  background-color: #2D3047;
+  color: #C9E4CA;
+  padding: 20px;
+}
+
+.App h1 {
+  color: #E8D7FF;
+}
+
+.App h2 {
+  color: #FFBC42;
+}
+
+.App h3 {
+  color: #FAA381;
+}
+
+.App h4 {
+  color: #FFBC42;
+}
+
+.App h5 {
+  color: #FAA381;
+}
+
+.App h6 {
+  color: #DFFFD6;
+}
+
+.App p {
+  color: #73d2de;
+}
+
+.App-header {
+  
+  /* 282c34 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.row {
+  
+}
